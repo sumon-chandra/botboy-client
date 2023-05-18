@@ -1,5 +1,9 @@
 import { FaGoogle } from "react-icons/fa";
+import { Link } from "react-router-dom";
 const Login = () => {
+ const handleSubmit = (e) => {
+  e.preventDefault()
+ }
   return (
     <div className="hero min-h-screen lg:bg-[url('https://i.ibb.co/zSfz9Pf/pattern.png')]">
       <div className="hero-content flex-col">
@@ -9,13 +13,14 @@ const Login = () => {
           </h1>
         </div>
         <div className="card lg:w-96 border border-mainColor bg-base-200">
-          <div className="card-body">
+          <form onSubmit={handleSubmit} className="card-body">
             <div className="form-control">
               <label className="label">
                 <span className="label-text">Email</span>
               </label>
               <input
                 type="email"
+                name="email"
                 placeholder="Enter your email"
                 className="input input-bordered"
               />
@@ -26,6 +31,7 @@ const Login = () => {
               </label>
               <input
                 type="password"
+                name="password"
                 placeholder="Enter a password"
                 className="input input-bordered"
               />
@@ -45,7 +51,8 @@ const Login = () => {
               <FaGoogle /> 
               <span>Continue with Google</span>
             </p>
-          </div>
+            <p className="text-xs mt-3">Don't have any account? <Link to="/registration" className="underline">Register now</Link></p>
+          </form>
         </div>
       </div>
     </div>
