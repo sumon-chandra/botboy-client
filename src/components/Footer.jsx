@@ -28,10 +28,10 @@ const Footer = () => {
       </section>
       <section className="footer px-10 py-4 border-t border-indigo-600">
         <div className="space-y-2">
-          <Link to="/" className="flex items-center select-none text-xl">
+          <a href="#" className="flex items-center select-none text-xl">
             <img className="w-10 mr-1" src={logo} alt="logo" />
             <span className="font-bold text-gray-800">Botboy</span>
-          </Link>
+          </a>
           <p>
             ACME Industries Ltd. <br />
             Providing reliable superhero toys since 1992

@@ -4,6 +4,8 @@ import { AuthContext } from "../context-providers/AuthProvider";
 import { Link } from "react-router-dom";
 
 const Registration = () => {
+const {register} = useContext(AuthContext);
+
 const handleSubmit = (e) => {
   e.preventDefault()
 }
@@ -57,7 +59,7 @@ const handleSubmit = (e) => {
               </label>
             </div>
             <div className="form-control mt-6">
-              <button className="lg:px-4 lg:py-2 text-lg text-white bg-gradient-to-br from-mainColor to-secColor rounded-md hover:bg-gradient-to-tl">
+              <button type="submit" className="lg:px-4 lg:py-2 text-lg text-white bg-gradient-to-br from-mainColor to-secColor rounded-md hover:bg-gradient-to-tl">
                 Register
               </button>
             </div>

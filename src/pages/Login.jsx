@@ -1,4 +1,4 @@
-import { FaGoogle } from "react-icons/fa";
+import { FaGoogle } from "react-icons/fa"
 import { Link } from "react-router-dom";
 const Login = () => {
  const handleSubmit = (e) => {
@@ -42,7 +42,7 @@ const Login = () => {
               </label>
             </div>
             <div className="form-control mt-6">
-              <button className="lg:px-4 lg:py-2 text-lg text-white bg-gradient-to-br from-mainColor to-secColor rounded-md hover:bg-gradient-to-tl">
+              <button type="submit" className="lg:px-4 lg:py-2 text-lg text-white bg-gradient-to-br from-mainColor to-secColor rounded-md hover:bg-gradient-to-tl">
                 Login
               </button>
             </div>
