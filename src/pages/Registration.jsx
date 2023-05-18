@@ -4,7 +4,7 @@ import { AuthContext } from "../context-providers/AuthProvider";
 import { Link, useNavigate } from "react-router-dom";
 
 const Registration = () => {
-  const { register, loginWithGoogle } = useContext(AuthContext);
+  const { register, loginWithGoogle, addUserInfo } = useContext(AuthContext);
   const [error, setError] = useState("");
   const navigate = useNavigate();
 
@@ -14,11 +14,14 @@ const Registration = () => {
     const email = form.email.value;
     const password = form.password.value;
     const confirmPassword = form.confirmPassword.value;
+    const photoURL = form.photoURL.value;
+    const name = form.name.value
     if (password !== confirmPassword) {
       setError("Passwords do not match !");
     }
     register(email, password)
       .then(() => {
+        addUserInfo(name, photoURL)
         form.reset();
         navigate("/");
       })
@@ -45,8 +48,21 @@ const Registration = () => {
             Register now!
           </h1>
         </div>
-        <div className="card lg:w-96 border border-mainColor bg-base-200">
-          <form onSubmit={handleSubmit} className="card-body">
+        <div className="card border border-mainColor bg-base-200">
+          <form onSubmit={handleSubmit} className="lg:grid grid-cols-2 p-10 gap-x-8 gap-y-1">
+            <div className="form-control">
+              <label className="label">
+                <span className="label-text">Name</span>
+              </label>
+              <input
+                type="text"
+                name="name"
+                required
+                placeholder="Enter your name"
+                className="input input-bordered"
+              />
+            </div>
+           
             <div className="form-control">
               <label className="label">
                 <span className="label-text">Email</span>
@@ -54,7 +70,20 @@ const Registration = () => {
               <input
                 type="email"
                 name="email"
+                required
                 placeholder="Enter your email"
+                className="input input-bordered"
+              />
+            </div>
+            <div className="form-control col-span-2">
+              <label className="label">
+                <span className="label-text">Photo URL</span>
+              </label>
+              <input
+                type="text"
+                name="photoURL"
+                required
+                placeholder="Your photo URL"
                 className="input input-bordered"
               />
             </div>
@@ -65,6 +94,7 @@ const Registration = () => {
               <input
                 type="password"
                 name="password"
+                required
                 placeholder="Enter a password"
                 className="input input-bordered"
               />
@@ -75,6 +105,7 @@ const Registration = () => {
               </label>
               <input
                 type="password"
+                required
                 name="confirmPassword"
                 placeholder="Confirm your password"
                 className="input input-bordered"
@@ -85,27 +116,29 @@ const Registration = () => {
                 </a>
               </label>
             </div>
-            <div className="form-control mt-6">
+            <div className="form-control mt-6 col-span-2">
               {error && (
-                <p className="text-red-600 text-sm font-semibold italic">
+                <p className="text-red-600 text-sm font-semibold italic mb-2">
                   {error}
                 </p>
               )}
               <button
                 type="submit"
-                className="lg:px-4 lg:py-2 text-lg text-white bg-gradient-to-br from-mainColor to-secColor rounded-md hover:bg-gradient-to-tl"
+                className="w-full lg:w-1/2 mx-auto lg:px-4 lg:py-2 text-lg text-white bg-gradient-to-br from-mainColor to-secColor rounded-md hover:bg-gradient-to-tl"
               >
                 Register
               </button>
             </div>
-            <p className="divider">OR</p>
+           <div className="col-span-2">
+           <p className="divider">OR</p>
             <p
               onClick={handleGoogleLogin}
-              className=" text-sm font-semibold flex items-center justify-center rounded gap-x-2 bg-indigo-100 border border-mainColor py-1 cursor-pointer"
+              className="w-full lg:w-1/2 mx-auto text-sm font-semibold flex items-center justify-center rounded gap-x-2 bg-indigo-100 border border-mainColor py-1 cursor-pointer"
             >
               <FaGoogle />
               <span>Continue with Google</span>
             </p>
+           </div>
             <p className="text-xs mt-3">
               Already have an account?{" "}
               <Link to="/login" className="underline">

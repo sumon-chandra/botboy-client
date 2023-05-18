@@ -6,13 +6,14 @@ import {
   GoogleAuthProvider,
   onAuthStateChanged,
   signOut,
+  updateProfile,
 } from "firebase/auth";
 import { auth } from "../firebase/firebase.config";
 
 export const AuthContext = createContext(null);
 
 const AuthProvider = ({ children }) => {
-  const [users, setUsers] = useState(null);
+  const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(false);
   const googleProvider = new GoogleAuthProvider();
 
@@ -39,10 +40,19 @@ const AuthProvider = ({ children }) => {
     return signOut(auth);
   };
 
+   // Update profile
+   const addUserInfo = (name, photoURL) => {
+    updateProfile(auth.currentUser, {
+      displayName: name,
+      photoURL,
+    });
+  };
+
   // Got the user changes
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
-      setUsers(user);
+      addUserInfo()
+      setUser(user);
       setLoading(false);
     });
     return () => unsubscribe();
@@ -51,10 +61,11 @@ const AuthProvider = ({ children }) => {
   const authInfo = {
     register,
     login,
-    users,
+    user,
     loading,
     loginWithGoogle,
     logout,
+    addUserInfo,
   };
   return (
     <AuthContext.Provider value={authInfo}>{children}</AuthContext.Provider>

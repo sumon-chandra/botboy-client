@@ -1,9 +1,36 @@
-import { FaGoogle } from "react-icons/fa"
-import { Link } from "react-router-dom";
+import { useContext, useState } from "react";
+import { FaGoogle } from "react-icons/fa";
+import { Link, useNavigate } from "react-router-dom";
+import { AuthContext } from "../context-providers/AuthProvider";
 const Login = () => {
- const handleSubmit = (e) => {
-  e.preventDefault()
- }
+  const { login, loginWithGoogle } = useContext(AuthContext);
+  const [error, setError] = useState("");
+  const navigate = useNavigate();
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const email = form.email.value;
+    const password = form.password.value;
+    login(email, password)
+      .then(() => {
+        form.reset();
+        navigate("/");
+      })
+      .catch(() => {
+        setError("Something went wrong !");
+      });
+  };
+
+  const handleGoogleLogin = () => {
+    loginWithGoogle()
+      .then(() => {
+        navigate("/");
+      })
+      .catch(() => {
+        setError("Something went wrong!");
+      });
+  };
   return (
     <div className="hero min-h-screen lg:bg-[url('https://i.ibb.co/zSfz9Pf/pattern.png')]">
       <div className="hero-content flex-col">
@@ -21,6 +48,7 @@ const Login = () => {
               <input
                 type="email"
                 name="email"
+                required
                 placeholder="Enter your email"
                 className="input input-bordered"
               />
@@ -32,6 +60,7 @@ const Login = () => {
               <input
                 type="password"
                 name="password"
+                required
                 placeholder="Enter a password"
                 className="input input-bordered"
               />
@@ -42,16 +71,32 @@ const Login = () => {
               </label>
             </div>
             <div className="form-control mt-6">
-              <button type="submit" className="lg:px-4 lg:py-2 text-lg text-white bg-gradient-to-br from-mainColor to-secColor rounded-md hover:bg-gradient-to-tl">
+              {error && (
+                <p className="text-red-600 text-sm font-semibold italic mb-2">
+                  {error}
+                </p>
+              )}
+              <button
+                type="submit"
+                className="lg:px-4 lg:py-2 text-lg text-white bg-gradient-to-br from-mainColor to-secColor rounded-md hover:bg-gradient-to-tl"
+              >
                 Login
               </button>
             </div>
             <p className="divider">OR</p>
-            <p className=" text-sm font-semibold flex items-center justify-center rounded gap-x-2 bg-indigo-100 border border-mainColor py-1 cursor-pointer">
-              <FaGoogle /> 
+            <p
+              onClick={handleGoogleLogin}
+              className=" text-sm font-semibold flex items-center justify-center rounded gap-x-2 bg-indigo-100 border border-mainColor py-1 cursor-pointer"
+            >
+              <FaGoogle />
               <span>Continue with Google</span>
             </p>
-            <p className="text-xs mt-3">Don't have any account? <Link to="/registration" className="underline">Register now</Link></p>
+            <p className="text-xs mt-3">
+              Don't have any account?{" "}
+              <Link to="/registration" className="underline">
+                Register now
+              </Link>
+            </p>
           </form>
         </div>
       </div>

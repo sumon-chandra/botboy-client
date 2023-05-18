@@ -1,7 +1,10 @@
 import NavItem from "./NavItem";
 import logo from "../../assets/logo.png";
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { AuthContext } from "../../context-providers/AuthProvider";
 const Navbar = () => {
+  const { user } = useContext(AuthContext);
   return (
     <div className="navbar bg-base-100 lg:px-20 px-4">
       <div className="navbar-start">
@@ -65,12 +68,20 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="navbar-end">
-            <Link to="/login" className="px-4 py-2 text-lg text-white bg-gradient-to-br from-mainColor to-secColor rounded-md hover:bg-gradient-to-tl">Login</Link>
-        {/* <label tabIndex={0} className="btn btn-ghost avatar">
-          <div className="w-10 rounded-full">
-            <img src="https://i.ibb.co/kBbDdKw/google.png" />
-          </div>
-        </label> */}
+        {user ? (
+          <label tabIndex={0} className="btn btn-ghost avatar">
+            <div className="w-10 rounded-full">
+              <img src={user.photoURL} />
+            </div>
+          </label>
+        ) : (
+          <Link
+            to="/login"
+            className="px-4 py-2 text-lg text-white bg-gradient-to-br from-mainColor to-secColor rounded-md hover:bg-gradient-to-tl"
+          >
+            Login
+          </Link>
+        )}
       </div>
     </div>
   );
