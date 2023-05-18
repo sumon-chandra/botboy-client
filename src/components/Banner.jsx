@@ -7,17 +7,16 @@ const Banner = () => {
       pagination={{
         dynamicBullets: true,
       }}
-      navigation={true}
       loop={true}
       autoplay={{
-        delay: 4000,
+        delay: 5000,
         disableOnInteraction: false,
       }}
-      modules={[Pagination, Navigation, Autoplay]}
+      modules={[Pagination, Autoplay]}
       className=" h-56 lg:h-[500px] relative"
     >
       <SwiperSlide className="bg-[url('https://i.ibb.co/L1Jcw3T/banner-01.png')] bg-left bg-cover py-10 bg-slate-300">
-        <div className="absolute lg:right-20 right-4 lg:pt-24 pt-6 ">
+        <div className="absolute lg:right-20 right-4 lg:pt-24 pt-6 text-right ">
           <p className=" lg:text-xl text-sm">Exclusive Offer On Toys</p>
           <h3 className="lg:text-7xl text-2xl font-bold">
             Kids Playing With <br /> Block Toys
@@ -31,7 +30,7 @@ const Banner = () => {
         </div>
       </SwiperSlide>
       <SwiperSlide className="bg-[url('https://i.ibb.co/TbW5yBq/banner-01-2.png')] bg-left bg-cover py-10 bg-slate-300">
-        <div className="absolute lg:right-20 right-4 lg:pt-24 pt-6 ">
+        <div className="absolute lg:right-20 right-4 lg:pt-24 pt-6 text-right ">
           <p className=" lg:text-xl text-sm">Exclusive Offer On Toys</p>
           <h3 className="lg:text-7xl text-2xl font-bold">
             Make Kids happy <br /> & Healthy
@@ -45,7 +44,7 @@ const Banner = () => {
         </div>
       </SwiperSlide>
       <SwiperSlide className="bg-[url('https://i.ibb.co/8K4y5Zw/banner-01-4.png')] bg-left bg-cover py-10 bg-slate-300">
-        <div className="absolute lg:right-20 right-4 lg:pt-24 pt-6 ">
+        <div className="absolute lg:right-20 right-4 lg:pt-24 pt-6 text-right ">
           <p className=" lg:text-xl text-sm">Exclusive Offer On Toys</p>
           <h3 className="lg:text-7xl text-2xl font-bold">
             Kids Playing With <br /> Block Toys
@@ -59,7 +58,7 @@ const Banner = () => {
         </div>
       </SwiperSlide>
       <SwiperSlide className="bg-[url('https://i.ibb.co/xf5tFzV/banner-01-1.png')] bg-left bg-cover py-10 bg-slate-300">
-        <div className="absolute lg:right-20 right-4 lg:pt-24 pt-6 ">
+        <div className="absolute lg:right-20 right-4 lg:pt-24 pt-6 text-right ">
           <p className=" lg:text-xl text-sm">Exclusive Offer On Toys</p>
           <h3 className="lg:text-7xl text-2xl font-bold">
             Kids Playing With <br /> Block Toys
