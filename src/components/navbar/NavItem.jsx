@@ -1,9 +1,13 @@
-const NavItem = () => {
-  return (
-    <div>
-      <h3>Nav item</h3>
-    </div>
-  );
-};
+import { NavLink } from "react-router-dom"
 
-export default NavItem;
+const NavItem = ({value, to}) => {
+  return (
+   <NavLink className={({ isActive }) =>
+   isActive
+     ? "bg-transparent text-secColor shadow font-semibold  lg:mt-0 mt-4"
+     : "bg-transparent text-gray-800 hover:shadow hover:text-mainColor font-semibold rounded lg:mt-0 mt-4"
+ } to={to}>{value}</NavLink>
+  )
+}
+
+export default NavItem

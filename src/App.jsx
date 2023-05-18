@@ -12,6 +12,9 @@ import Home from "./pages/home";
 import Login from "./pages/Login";
 import Error from "./pages/Error";
 import Blog from "./pages/Blog";
+import AddToy from "./pages/AddToy";
+import AllToys from "./pages/AllToys";
+import MyToys from "./pages/MyToys";
 
 const App = () => {
   const router = createBrowserRouter(
@@ -19,6 +22,9 @@ const App = () => {
       <Route>
         <Route path="/" element={<RootLayout />}>
           <Route index element={<Home />} />
+          <Route path="add-toy" element={<AddToy />} />
+          <Route path="all-toys" element={<AllToys />} />
+          <Route path="my-toys" element={<MyToys />} />
           <Route path="blogs" element={<Blog />} />
           <Route path="login" element={<Login />} />
         </Route>
