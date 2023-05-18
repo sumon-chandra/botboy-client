@@ -1,10 +1,15 @@
 import NavItem from "./NavItem";
 import logo from "../../assets/logo.png";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "../../context-providers/AuthProvider";
 const Navbar = () => {
-  const { user } = useContext(AuthContext);
+  const { user, logout } = useContext(AuthContext);
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    logout().then(() => navigate("/login"))
+  };
   return (
     <div className="navbar bg-slate-100 lg:px-20 px-4">
       <div className="navbar-start">
@@ -79,7 +84,7 @@ const Navbar = () => {
               <li>
                 <NavItem value="My Toys" to="/my-toys" />
               </li>
-              <button className="btn btn-sm px-4 py-2 normal-case text-white bg-gradient-to-br from-mainColor to-secColor hover:bg-gradient-to-tl border-0">
+              <button onClick={handleLogout} className="btn btn-sm px-4 py-2 normal-case text-white bg-gradient-to-br from-mainColor to-secColor hover:bg-gradient-to-tl border-0">
                 Logout
               </button>
             </ul>
