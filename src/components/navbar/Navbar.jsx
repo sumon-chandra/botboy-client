@@ -6,7 +6,7 @@ import { AuthContext } from "../../context-providers/AuthProvider";
 const Navbar = () => {
   const { user } = useContext(AuthContext);
   return (
-    <div className="navbar bg-base-100 lg:px-20 px-4">
+    <div className="navbar bg-slate-100 lg:px-20 px-4">
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -48,7 +48,7 @@ const Navbar = () => {
           <span className="font-bold text-gray-800">Botboy</span>
         </Link>
       </div>
-      <div className="navbar-center hidden lg:flex">
+      <div className="navbar-end hidden lg:flex">
         <ul className="menu menu-horizontal px-1 gap-x-4">
           <li>
             <NavItem value="Home" to="/" />
@@ -57,27 +57,37 @@ const Navbar = () => {
             <NavItem value="All Toy" to="/all-toys" />
           </li>
           <li>
-            <NavItem value="Add A Toy" to="add-toy" />
-          </li>
-          <li>
-            <NavItem value="My Toys" to="/my-toys" />
-          </li>
-          <li>
             <NavItem value="Blog" to="/blogs" />
           </li>
         </ul>
       </div>
-      <div className="navbar-end">
+      <div className="navbar-end lg:w-20">
         {user ? (
-          <label tabIndex={0} className="btn btn-ghost avatar">
-            <div className="w-10 rounded-full">
-              <img src={user.photoURL} />
-            </div>
-          </label>
+          <div className="dropdown dropdown-end">
+            <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+              <div className="w-10 rounded-full">
+                <img src={user?.photoURL} />
+              </div>
+            </label>
+            <ul
+              tabIndex={0}
+              className="mt-3 menu menu-compact dropdown-content rounded w-52 lg:gap-y-2 p-4 bg-slate-100"
+            >
+              <li>
+                <NavItem value="Add A Toy" to="/add-toy" />
+              </li>
+              <li>
+                <NavItem value="My Toys" to="/my-toys" />
+              </li>
+              <button className="btn btn-sm px-4 py-2 normal-case text-white bg-gradient-to-br from-mainColor to-secColor hover:bg-gradient-to-tl border-0">
+                Logout
+              </button>
+            </ul>
+          </div>
         ) : (
           <Link
             to="/login"
-            className="px-4 py-2 text-lg text-white bg-gradient-to-br from-mainColor to-secColor rounded-md hover:bg-gradient-to-tl"
+            className="px-4 py-2 text-lg text-white bg-gradient-to-br from-mainColor to-secColor rounded-md hover:bg-gradient-to-tl border-0"
           >
             Login
           </Link>
