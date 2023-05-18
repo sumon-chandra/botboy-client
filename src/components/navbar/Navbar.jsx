@@ -65,7 +65,7 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="navbar-end">
-            <button className="px-4 py-2 text-lg text-white bg-gradient-to-br from-mainColor to-secColor rounded-md hover:bg-gradient-to-tl">Login</button>
+            <Link to="/login" className="px-4 py-2 text-lg text-white bg-gradient-to-br from-mainColor to-secColor rounded-md hover:bg-gradient-to-tl">Login</Link>
         {/* <label tabIndex={0} className="btn btn-ghost avatar">
           <div className="w-10 rounded-full">
             <img src="https://i.ibb.co/kBbDdKw/google.png" />
