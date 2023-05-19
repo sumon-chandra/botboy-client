@@ -1,13 +1,13 @@
 const Gallery = () => {
   return (
-    <section className="lg:px-20 px-4 py-20">
+    <section className="lg:px-20 px-4 lg:py-20 py-10">
       <div className="text-center">
         <p className="text-[12px]">Our Gallery</p>
-        <h4 className="text-5xl font-bold text-mainColor">
+        <h4 className="lg:text-5xl text-2xl font-bold text-mainColor">
           Our Gallery Section
         </h4>
       </div>
-      <div className="mt-8 lg:grid grid-cols-2 md:grid-cols-4 gap-4 ">
+      <div className="mt-8 grid grid-cols-2 lg:grid-cols-4 gap-4 ">
         <div className="grid gap-4">
           <div>
             <img
