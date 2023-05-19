@@ -4,7 +4,7 @@ const Gallery = () => {
       <div className="text-center">
         <p className="text-[12px]">Our Gallery</p>
         <h4 className="lg:text-5xl text-2xl font-bold text-mainColor">
-          Our Gallery Section
+          Explore Our Gallery Section
         </h4>
       </div>
       <div className="mt-8 grid grid-cols-2 lg:grid-cols-4 gap-4 ">
@@ -46,7 +46,7 @@ const Gallery = () => {
           </div>
         </div>
         <div className="grid gap-4">
-        <div>
+          <div>
             <img
               src="https://i.ibb.co/pnS7yNx/gallery-7.jpg"
               alt="gallery image"
@@ -61,7 +61,7 @@ const Gallery = () => {
               className="h-auto max-w-full duration-500 cursor-pointer hover:scale-110 rounded-lg"
             />
           </div>
-          
+
           <div>
             <img
               src="https://i.ibb.co/7tv31cx/gallery-5.jpg"
@@ -78,7 +78,7 @@ const Gallery = () => {
           </div>
         </div>
         <div className="grid gap-4">
-        <div>
+          <div>
             <img
               src="https://i.ibb.co/rvZbWNw/gallery-4.jpg"
               alt="gallery image"
