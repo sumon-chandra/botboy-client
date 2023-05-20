@@ -27,7 +27,7 @@ const SpecialProducts = () => {
       <Link
         data-aos="fade-up"
         data-aos-duration="1000"
-        to="/"
+        to="/all-toys"
         className="underline w-24 mt-8 text-sm text-mainColor justify-end items-center flex gap-x-2 cursor-pointer"
       >
         <span>See More</span>
