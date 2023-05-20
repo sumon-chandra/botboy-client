@@ -7,7 +7,7 @@ const ToyCard = ({ toy, allToys }) => {
     <Link
       data-aos="fade-up"
       data-aos-duration="1000"
-      to="/"
+      to={`/toys/${toy._id}`}
       key={toy._id}
       className="card relative w-full shadow-xl border border-indigo-100 mb-4 lg:mb-0 rounded-lg z-0"
     >
@@ -51,7 +51,7 @@ const ToyCard = ({ toy, allToys }) => {
           <span>See Details</span>
           <BsArrowUpRightSquare />
         </Link>
-        {toy.category && (
+        {allToys && toy.category && (
           <div>
             <p className="badge absolute left-4 top-4 text-sm bg-mainColor border-0">
               {toy.category}

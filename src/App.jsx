@@ -16,6 +16,7 @@ import AddToy from "./pages/AddToy";
 import AllToys from "./pages/AllToys";
 import MyToys from "./pages/MyToys";
 import Registration from "./pages/Registration";
+import ToyDetails from "./pages/ToyDetails";
 
 const App = () => {
   const router = createBrowserRouter(
@@ -25,6 +26,7 @@ const App = () => {
           <Route index element={<Home />} />
           <Route path="add-toy" element={<AddToy />} />
           <Route path="all-toys" element={<AllToys />} />
+          <Route path="toys/:id" element={<ToyDetails />} />
           <Route path="my-toys" element={<MyToys />} />
           <Route path="blogs" element={<Blog />} />
           <Route path="login" element={<Login />} />
