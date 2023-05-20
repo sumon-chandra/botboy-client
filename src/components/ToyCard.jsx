@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import ReactStars from "react-rating-stars-component";
 import { BsArrowUpRightSquare } from "react-icons/bs";
 
-const ToyCard = ({ toy }) => {
+const ToyCard = ({ toy, allToys }) => {
   return (
     <Link
       data-aos="fade-up"
@@ -19,7 +19,14 @@ const ToyCard = ({ toy }) => {
         />
       </figure>
       <div className="card-body">
-        <h5 className="card-title text-lg text-mainColor">{toy.toy_name}</h5>
+        <div className="font-bold text-lg text-mainColor">
+          <p>{toy.toy_name} </p>
+          {allToys && (
+            <p className="text-xs text-gray-400">
+              ( {toy.quantity} piece available )
+            </p>
+          )}
+        </div>
         <div className="flex justify-between items-center py-2">
           {toy.discount ? (
             <p className="text-xl font-bold">
@@ -44,7 +51,19 @@ const ToyCard = ({ toy }) => {
           <span>See Details</span>
           <BsArrowUpRightSquare />
         </Link>
+        {toy.category && (
+          <div>
+            <p className="badge absolute left-4 top-4 text-sm bg-mainColor border-0">
+              {toy.category}
+            </p>
+          </div>
+        )}
       </div>
+      {allToys && (
+        <p className="p-2 font-semibold text-xs border-t-2">
+          Seller - {toy.seller_name}
+        </p>
+      )}
       {toy.discount && (
         <div className="badge absolute right-4 top-4 font-bold text-xs bg-mainColor border-0">
           - {toy.discount}%

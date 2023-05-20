@@ -67,7 +67,7 @@ const AllToys = () => {
       ) : (
         <main className="lg:grid grid-cols-4 gap-x-4 gap-y-7 px-4 lg:px-20 py-20">
           {toys.map((toy) => (
-            <ToyCard toy={toy} key={toy._id} />
+            <ToyCard allToys={true} toy={toy} key={toy._id} />
           ))}
         </main>
       )}
