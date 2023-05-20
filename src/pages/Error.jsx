@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
+import useTitle from "../hooks/useTitle";
 
 const Error = () => {
+  useTitle("Error");
   return (
     <div className="min-w-full min-h-screen grid place-items-center">
       <div className="flex items-center gap-x-6">
@@ -9,9 +11,13 @@ const Error = () => {
           <p>Error</p>
         </div>
         <div className="text-2xl ">
-
-        <p className="text-gray-500">Page not found</p>
-        <p className="text-gray-500">Go to <Link to="/" className="underline font-semibold italic">homepage</Link> </p>
+          <p className="text-gray-500">Page not found</p>
+          <p className="text-gray-500">
+            Go to{" "}
+            <Link to="/" className="underline font-semibold italic">
+              homepage
+            </Link>{" "}
+          </p>
         </div>
       </div>
     </div>

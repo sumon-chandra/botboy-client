@@ -2,11 +2,13 @@ import { useContext, useState } from "react";
 import { FaGoogle } from "react-icons/fa";
 import { AuthContext } from "../context-providers/AuthProvider";
 import { Link, useNavigate } from "react-router-dom";
+import useTitle from "../hooks/useTitle";
 
 const Registration = () => {
   const { register, loginWithGoogle, addUserInfo } = useContext(AuthContext);
   const [error, setError] = useState("");
   const navigate = useNavigate();
+  useTitle("Registration");
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -15,13 +17,13 @@ const Registration = () => {
     const password = form.password.value;
     const confirmPassword = form.confirmPassword.value;
     const photoURL = form.photoURL.value;
-    const name = form.name.value
+    const name = form.name.value;
     if (password !== confirmPassword) {
       setError("Passwords do not match !");
     }
     register(email, password)
       .then(() => {
-        addUserInfo(name, photoURL)
+        addUserInfo(name, photoURL);
         form.reset();
         navigate("/");
       })
@@ -49,7 +51,10 @@ const Registration = () => {
           </h1>
         </div>
         <div className="card border border-mainColor bg-base-200">
-          <form onSubmit={handleSubmit} className="lg:grid grid-cols-2 p-10 gap-x-8 gap-y-1">
+          <form
+            onSubmit={handleSubmit}
+            className="lg:grid grid-cols-2 p-10 gap-x-8 gap-y-1"
+          >
             <div className="form-control">
               <label className="label">
                 <span className="label-text">Name</span>
@@ -62,7 +67,7 @@ const Registration = () => {
                 className="input input-bordered"
               />
             </div>
-           
+
             <div className="form-control">
               <label className="label">
                 <span className="label-text">Email</span>
@@ -129,16 +134,16 @@ const Registration = () => {
                 Register
               </button>
             </div>
-           <div className="col-span-2">
-           <p className="divider">OR</p>
-            <p
-              onClick={handleGoogleLogin}
-              className="w-full lg:w-1/2 mx-auto text-sm font-semibold flex items-center justify-center rounded gap-x-2 bg-indigo-100 border border-mainColor py-1 cursor-pointer"
-            >
-              <FaGoogle />
-              <span>Continue with Google</span>
-            </p>
-           </div>
+            <div className="col-span-2">
+              <p className="divider">OR</p>
+              <p
+                onClick={handleGoogleLogin}
+                className="w-full lg:w-1/2 mx-auto text-sm font-semibold flex items-center justify-center rounded gap-x-2 bg-indigo-100 border border-mainColor py-1 cursor-pointer"
+              >
+                <FaGoogle />
+                <span>Continue with Google</span>
+              </p>
+            </div>
             <p className="text-xs mt-3">
               Already have an account?{" "}
               <Link to="/login" className="underline">

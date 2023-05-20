@@ -15,12 +15,15 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 // React tabs CSS
-import 'react-tabs/style/react-tabs.css';
+import "react-tabs/style/react-tabs.css";
+import { HelmetProvider } from "react-helmet-async";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <AuthProvider>
-      <App />
-    </AuthProvider>
+    <HelmetProvider>
+      <AuthProvider>
+        <App />
+      </AuthProvider>
+    </HelmetProvider>
   </React.StrictMode>
 );

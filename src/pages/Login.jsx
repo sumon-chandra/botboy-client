@@ -2,10 +2,12 @@ import { useContext, useState } from "react";
 import { FaGoogle } from "react-icons/fa";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../context-providers/AuthProvider";
+import useTitle from "../hooks/useTitle";
 const Login = () => {
   const { login, loginWithGoogle } = useContext(AuthContext);
   const [error, setError] = useState("");
   const navigate = useNavigate();
+  useTitle("Login");
 
   const handleSubmit = (e) => {
     e.preventDefault();

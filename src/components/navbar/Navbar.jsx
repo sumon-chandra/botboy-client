@@ -8,7 +8,7 @@ const Navbar = () => {
   const navigate = useNavigate();
 
   const handleLogout = () => {
-    logout().then(() => navigate("/login"))
+    logout().then(() => navigate("/login"));
   };
   return (
     <div className="navbar bg-slate-100 lg:px-20 px-4">
@@ -38,10 +38,7 @@ const Navbar = () => {
               <NavItem value="Home" to="/" />
             </li>
             <li>
-              <NavItem value="All Toy" to="/all-toys" />
-            </li>
-            <li>
-              <NavItem value="Add A Toy" to="add-toy" />
+              <NavItem value="All Toys" to="/all-toys" />
             </li>
             <li>
               <NavItem value="Blog" to="/blogs" />
@@ -59,7 +56,7 @@ const Navbar = () => {
             <NavItem value="Home" to="/" />
           </li>
           <li>
-            <NavItem value="All Toy" to="/all-toys" />
+            <NavItem value="All Toys" to="/all-toys" />
           </li>
           <li>
             <NavItem value="Blog" to="/blogs" />
@@ -84,7 +81,10 @@ const Navbar = () => {
               <li>
                 <NavItem value="My Toys" to="/my-toys" />
               </li>
-              <button onClick={handleLogout} className="btn btn-sm px-4 py-2 normal-case text-white bg-gradient-to-br from-mainColor to-secColor hover:bg-gradient-to-tl border-0">
+              <button
+                onClick={handleLogout}
+                className="btn btn-sm px-4 py-2 normal-case text-white bg-gradient-to-br from-mainColor to-secColor hover:bg-gradient-to-tl border-0"
+              >
                 Logout
               </button>
             </ul>
