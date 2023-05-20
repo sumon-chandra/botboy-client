@@ -6,8 +6,10 @@ import FlatDiscount from "../components/home/FlatDiscount";
 import Gallery from "../components/home/Gallery";
 import SpecialDiscount from "../components/home/SpecialDiscount";
 import SpecialProducts from "../components/home/SpecialProducts";
+import useTitle from "../hooks/useTitle";
 
 const Home = () => {
+  useTitle("Home");
   return (
     <>
       <Banner />
