@@ -5,6 +5,7 @@ import FlashSell from "../components/home/FlashSell";
 import FlatDiscount from "../components/home/FlatDiscount";
 import Gallery from "../components/home/Gallery";
 import SpecialDiscount from "../components/home/SpecialDiscount";
+import SpecialProducts from "../components/home/SpecialProducts";
 
 const Home = () => {
   return (
@@ -15,6 +16,7 @@ const Home = () => {
       <FlatDiscount />
       <CategoryTabs />
       <SpecialDiscount />
+      <SpecialProducts />
       <Gallery />
     </>
   );

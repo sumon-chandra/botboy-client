@@ -9,7 +9,7 @@ const ToyCard = ({ toy }) => {
       data-aos-duration="1000"
       to="/"
       key={toy._id}
-      className="card relative w-full shadow-xl border border-indigo-100 rounded-lg z-0"
+      className="card relative w-full shadow-xl border border-indigo-100 mb-4 lg:mb-0 rounded-lg z-0"
     >
       <figure className="lg:h-72 h-52">
         <img

@@ -24,7 +24,7 @@ const CategoryTabs = () => {
 
   return (
     <section className="lg:px-20 px-4 lg:py-20 py-10">
-      <div className="text-center">
+      <div data-aos="fade-up" data-aos-duration="1000" className="text-center">
         <p className="text-[12px]">Categories</p>
         <h4 className="lg:text-5xl text-2xl font-bold text-mainColor">
           Explore Our Categories
