@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper";
-import ToyCard from "./ToyCard";
 import { BsArrowUpRightSquare } from "react-icons/bs";
+import ToyCard from "./ToyCard";
+import Countdown from "./Countdown";
 
 const FlashSell = () => {
   const [toys, setToys] = useState([]);
@@ -14,11 +15,14 @@ const FlashSell = () => {
   }, []);
   return (
     <div className="lg:mx-20 lg:my-20 m-4">
-      <div className="flex justify-between">
-        <h4 className="lg:text-5xl mb-4 text-2xl font-bold text-mainColor">
-          Flash Sell
-        </h4>
-        <p className="underline text-sm text-mainColor justify-end items-center flex gap-x-2">
+      <div className="flex justify-between items-start">
+        <div className="lg:flex gap-x-2">
+          <h4 className="lg:text-5xl mb-4 text-2xl font-bold text-mainColor">
+            Flash Sale
+          </h4>
+          <Countdown duration={1 * 24 * 60 * 60 * 1000} />
+        </div>
+        <p className="underline text-sm text-mainColor justify-end items-center flex gap-x-2 cursor-pointer">
           <span>See More</span>
           <BsArrowUpRightSquare />
         </p>
