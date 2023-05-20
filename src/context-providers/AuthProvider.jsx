@@ -31,6 +31,7 @@ const AuthProvider = ({ children }) => {
 
   // Login with google account
   const loginWithGoogle = () => {
+    setLoading(true);
     return signInWithPopup(auth, googleProvider);
   };
 
@@ -40,8 +41,8 @@ const AuthProvider = ({ children }) => {
     return signOut(auth);
   };
 
-   // Update profile
-   const addUserInfo = (name, photoURL) => {
+  // Update profile
+  const addUserInfo = (name, photoURL) => {
     updateProfile(auth.currentUser, {
       displayName: name,
       photoURL,
@@ -51,9 +52,9 @@ const AuthProvider = ({ children }) => {
   // Got the user changes
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
-      addUserInfo()
+      addUserInfo();
       setUser(user);
-      setLoading(false);
+      setLoading(true);
     });
     return () => unsubscribe();
   }, []);

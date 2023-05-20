@@ -1,14 +1,17 @@
 import { useContext, useState } from "react";
 import { FaGoogle } from "react-icons/fa";
 import { AuthContext } from "../context-providers/AuthProvider";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import useTitle from "../hooks/useTitle";
 
 const Registration = () => {
   const { register, loginWithGoogle, addUserInfo } = useContext(AuthContext);
   const [error, setError] = useState("");
   const navigate = useNavigate();
+  const location = useLocation();
   useTitle("Registration");
+
+  const from = location.state?.from?.pathname || "/";
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -25,7 +28,7 @@ const Registration = () => {
       .then(() => {
         addUserInfo(name, photoURL);
         form.reset();
-        navigate("/");
+        navigate(from, { replace: true });
       })
       .catch(() => {
         setError("Something went wrong !");
@@ -35,7 +38,7 @@ const Registration = () => {
   const handleGoogleLogin = () => {
     loginWithGoogle()
       .then(() => {
-        navigate("/");
+        navigate(from, { replace: true });
       })
       .catch(() => {
         setError("Something went wrong!");
