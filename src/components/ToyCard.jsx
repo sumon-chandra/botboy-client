@@ -5,6 +5,8 @@ import { BsArrowUpRightSquare } from "react-icons/bs";
 const ToyCard = ({ toy }) => {
   return (
     <Link
+      data-aos="fade-up"
+      data-aos-duration="1000"
       to="/"
       key={toy._id}
       className="card relative w-full shadow-xl border border-indigo-100 rounded-lg z-0"
@@ -13,7 +15,7 @@ const ToyCard = ({ toy }) => {
         <img
           src={toy.picture}
           alt={toy.toy_name}
-          className="w-24 hover:scale-150 duration-[3000ms] z-10"
+          className="w-1/2 hover:scale-150 duration-[3000ms] z-10"
         />
       </figure>
       <div className="card-body">

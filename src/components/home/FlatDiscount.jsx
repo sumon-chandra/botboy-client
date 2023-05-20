@@ -1,7 +1,11 @@
 const FlatDiscount = () => {
   return (
-    <section className="lg:px-20 px-4 lg:flex gap-5 lg:py-20 py-8">
-      <div className="relative bg-indigo-100 cursor-pointer select-none rounded-xl mb-4 lg:mb-0">
+    <section className="lg:px-20 px-4 lg:flex gap-5 py-8">
+      <div
+        data-aos="fade-up"
+        data-aos-duration="1000"
+        className="relative bg-indigo-100 cursor-pointer select-none rounded-xl mb-4 lg:mb-0"
+      >
         <img
           src="https://i.ibb.co/qpT5k1N/discount-5.jpg"
           alt=""
@@ -15,7 +19,11 @@ const FlatDiscount = () => {
           <p className="text-mainColor underline font-bold mt-5">Shop Now</p>
         </div>
       </div>
-      <div className="relative bg-indigo-100 cursor-pointer select-none rounded-xl mb-4 lg:mb-0">
+      <div
+        data-aos="fade-up"
+        data-aos-duration="2000"
+        className="relative bg-indigo-100 cursor-pointer select-none rounded-xl mb-4 lg:mb-0"
+      >
         <img
           src="https://i.ibb.co/mTx1Lxn/discount-6.jpg"
           alt=""
@@ -29,7 +37,11 @@ const FlatDiscount = () => {
           <p className="text-mainColor underline font-bold mt-5">Shop Now</p>
         </div>
       </div>
-      <div className="relative bg-indigo-100 cursor-pointer select-none rounded-xl mb-4 lg:mb-0">
+      <div
+        data-aos="fade-up"
+        data-aos-duration="3000"
+        className="relative bg-indigo-100 cursor-pointer select-none rounded-xl mb-4 lg:mb-0"
+      >
         <img
           src="https://i.ibb.co/5cXsbr8/discount-4.jpg"
           alt=""

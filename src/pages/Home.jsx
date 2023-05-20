@@ -1,9 +1,10 @@
-import AboutService from "../components/AboutService";
-import Banner from "../components/Banner";
-import CategoryTabs from "../components/CategoryTabs";
-import FlashSell from "../components/FlashSell";
-import FlatDiscount from "../components/FlatDiscount";
-import Gallery from "../components/Gallery";
+import AboutService from "../components/home/AboutService";
+import Banner from "../components/home/Banner";
+import CategoryTabs from "../components/home/CategoryTabs";
+import FlashSell from "../components/home/FlashSell";
+import FlatDiscount from "../components/home/FlatDiscount";
+import Gallery from "../components/home/Gallery";
+import SpecialDiscount from "../components/home/SpecialDiscount";
 
 const Home = () => {
   return (
@@ -13,6 +14,7 @@ const Home = () => {
       <FlashSell />
       <FlatDiscount />
       <CategoryTabs />
+      <SpecialDiscount />
       <Gallery />
     </>
   );

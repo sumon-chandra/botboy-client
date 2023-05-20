@@ -1,8 +1,6 @@
 import { useState, useEffect } from "react";
 import { Tab, TabList, TabPanel, Tabs } from "react-tabs";
-import ReactStars from "react-rating-stars-component";
-import { Link } from "react-router-dom";
-import ToyCard from "./ToyCard";
+import ToyCard from "../ToyCard";
 
 const CategoryTabs = () => {
   const [toys, setToys] = useState([]);

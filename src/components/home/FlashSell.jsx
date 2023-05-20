@@ -2,8 +2,8 @@ import { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper";
 import { BsArrowUpRightSquare } from "react-icons/bs";
-import ToyCard from "./ToyCard";
-import Countdown from "./Countdown";
+import Countdown from "../Countdown";
+import ToyCard from "../ToyCard";
 
 const FlashSell = () => {
   const [toys, setToys] = useState([]);

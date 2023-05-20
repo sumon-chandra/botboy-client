@@ -11,6 +11,13 @@ const Gallery = () => {
         <div className="grid gap-4">
           <div>
             <img
+              src="https://i.ibb.co/3YvLsTq/gallery-3.jpg"
+              alt="gallery image"
+              className="h-auto max-w-full duration-500 cursor-pointer hover:scale-110 rounded-lg"
+            />
+          </div>
+          <div>
+            <img
               src="https://i.ibb.co/7vRP91v/gallery-2.jpg"
               alt="gallery image"
               className="h-auto max-w-full duration-500 cursor-pointer hover:scale-110 rounded-lg"
@@ -19,20 +26,6 @@ const Gallery = () => {
           <div>
             <img
               src="https://i.ibb.co/TPq8mm1/gallery-1.jpg"
-              alt="gallery image"
-              className="h-auto max-w-full duration-500 cursor-pointer hover:scale-110 rounded-lg"
-            />
-          </div>
-          <div>
-            <img
-              src="https://i.ibb.co/wMN0dYb/gallery-9.jpg"
-              alt="gallery image"
-              className="h-auto max-w-full duration-500 cursor-pointer hover:scale-110 rounded-lg"
-            />
-          </div>
-          <div>
-            <img
-              src="https://i.ibb.co/wMN0dYb/gallery-9.jpg"
               alt="gallery image"
               className="h-auto max-w-full duration-500 cursor-pointer hover:scale-110 rounded-lg"
             />
@@ -53,7 +46,6 @@ const Gallery = () => {
               className="h-auto max-w-full duration-500 cursor-pointer hover:scale-110 rounded-lg"
             />
           </div>
-
           <div>
             <img
               src="https://i.ibb.co/VBW3tzx/gallery-8.jpg"
@@ -61,7 +53,6 @@ const Gallery = () => {
               className="h-auto max-w-full duration-500 cursor-pointer hover:scale-110 rounded-lg"
             />
           </div>
-
           <div>
             <img
               src="https://i.ibb.co/7tv31cx/gallery-5.jpg"
@@ -94,7 +85,14 @@ const Gallery = () => {
           </div>
           <div>
             <img
-              src="https://i.ibb.co/3YvLsTq/gallery-3.jpg"
+              src="https://i.ibb.co/wMN0dYb/gallery-9.jpg"
+              alt="gallery image"
+              className="h-auto max-w-full duration-500 cursor-pointer hover:scale-110 rounded-lg"
+            />
+          </div>
+          <div>
+            <img
+              src="https://i.ibb.co/48bSh49/discount-3.jpg"
               alt="gallery image"
               className="h-auto max-w-full duration-500 cursor-pointer hover:scale-110 rounded-lg"
             />
