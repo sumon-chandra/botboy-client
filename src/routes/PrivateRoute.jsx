@@ -6,15 +6,13 @@ import { AuthContext } from "../context-providers/AuthProvider";
 const PrivateRoute = () => {
   const { user, loading } = useContext(AuthContext);
   const location = useLocation();
-  console.log(loading);
-  console.log(user);
 
   return !loading ? (
     <div className="w-full min-h-screen flex items-center justify-center">
       <Circles
         height="80"
         width="80"
-        color="#4fa94d"
+        color="#4f46e5"
         ariaLabel="circles-loading"
         wrapperStyle={{}}
         wrapperClass=""

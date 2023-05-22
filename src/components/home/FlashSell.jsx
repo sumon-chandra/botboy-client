@@ -9,7 +9,7 @@ const FlashSell = () => {
   const [toys, setToys] = useState([]);
 
   useEffect(() => {
-    fetch("https://botboy.vercel.app/toys/discount")
+    fetch("https://botboy.vercel.app/discount")
       .then((res) => res.json())
       .then((data) => setToys(data));
   }, []);

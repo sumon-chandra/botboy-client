@@ -9,11 +9,30 @@ const ToyDetails = () => {
   useTitle("Toy Details");
   const params = useParams();
 
+  // !!!!!!! All toys and my-toys they are in default database. So the URL should change to navigate to right route and database.
+
+  let url = "";
+  const getUrl = `https://botboy.vercel.app/toys/${params.id}`;
+  const myToysUrl = `https://botboy.vercel.app/my-toys/${params.id}`;
+  const match = getUrl.match(/\/toys\/(personal)\w+/);
+  if (match) {
+    if (match[1] === "personal") {
+      const modifiedUrl = myToysUrl.replace(/\personal/, "");
+      console.log(modifiedUrl);
+      url = modifiedUrl;
+    }
+  } else {
+    url = `https://botboy.vercel.app/toys/${params.id}`;
+  }
   useEffect(() => {
-    fetch(`https://botboy.vercel.app/toys/${params.id}`)
+    window.scrollTo(0, 0);
+    fetch(url)
       .then((res) => res.json())
-      .then((data) => setToy(data));
-  }, []);
+      .then((data) => setToy(data))
+      .catch((err) => {
+        console.error(err);
+      });
+  }, [url]);
   return (
     <>
       <div className="bg-mainColor py-6">
@@ -54,12 +73,7 @@ const ToyDetails = () => {
             )}
 
             <p className="flex items-center gap-x-2 font-bold text-sm">
-              <ReactStars
-                size={20}
-                value={toy.rating}
-                activeColor="yellow"
-                edit={false}
-              />
+              <ReactStars size={20} value={toy.rating} edit={false} />
               <span>{toy.rating}</span>
             </p>
           </div>

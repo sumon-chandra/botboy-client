@@ -7,7 +7,7 @@ const SpecialProducts = () => {
   const [toys, setToys] = useState([]);
 
   useEffect(() => {
-    fetch("https://botboy.vercel.app/toys/only-for-you")
+    fetch("https://botboy.vercel.app/only-for-you")
       .then((res) => res.json())
       .then((data) => setToys(data));
   }, []);
@@ -21,7 +21,7 @@ const SpecialProducts = () => {
       </div>
       <div className="mt-8 lg:grid grid-cols-4 gap-x-4 gap-y-6">
         {toys.map((toy) => (
-          <ToyCard toy={toy} />
+          <ToyCard key={toy._id} toy={toy} />
         ))}
       </div>
       <Link
