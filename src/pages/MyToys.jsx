@@ -58,19 +58,6 @@ const MyToys = () => {
         visible={true}
       />
     </div>
-  ) : toys.length === 0 ? (
-    <div className="min-h-screen flex items-center justify-center">
-      <div className="bg-slate-100 p-6">
-        <p>
-          <span className="text-red-500 text-4xl font-black">
-            You have no toy !
-          </span>
-        </p>
-        <Link to="/add-toy" className="btn btn-link normal-case text-red-300">
-          Add a Toy
-        </Link>
-      </div>
-    </div>
   ) : (
     <>
       <div className="bg-mainColor py-6">
@@ -111,9 +98,9 @@ const MyToys = () => {
               {toy.category ? toy.category : "No category selected"}
             </p>
             <div className="col-span-2 flex lg:flex-row justify-end gap-6 items-start lg:static absolute top-10 right-4 flex-col">
-              <span>
+              <Link to={`/update-toys/${toy._id}`}>
                 <FaEdit className="text-xl font-black text-secColor cursor-pointer" />
-              </span>
+              </Link>
               <span onClick={() => handleDelete(toy._id)}>
                 <FaTrashAlt className="text-xl font-black text-secColor cursor-pointer" />
               </span>

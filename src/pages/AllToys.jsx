@@ -6,7 +6,7 @@ import useTitle from "../hooks/useTitle";
 const AllToys = () => {
   const [toys, setToys] = useState([]);
   const [error, setError] = useState("");
-  const [sortedValue, setSortedValue] = useState("ascending");
+  const [sortedValue, setSortedValue] = useState("");
   useTitle("All Toys");
 
   const handleSearch = (e) => {

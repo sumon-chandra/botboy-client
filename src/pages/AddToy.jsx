@@ -1,6 +1,7 @@
 import { useState } from "react";
 import useTitle from "../hooks/useTitle";
 import { useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const AddToy = () => {
   const [category, setCategory] = useState("");
@@ -36,7 +37,12 @@ const AddToy = () => {
       .then((res) => res.json())
       .then((data) => {
         if (data.insertedId) {
-          alert("Toy added successfully");
+          Swal.fire({
+            title: "Success!",
+            text: "Coffee added successfully",
+            icon: "success",
+            confirmButtonText: "Confirm",
+          });
           navigate("/my-toys");
         }
       });
