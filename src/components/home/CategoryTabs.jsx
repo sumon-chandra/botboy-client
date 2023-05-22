@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Tab, TabList, TabPanel, Tabs } from "react-tabs";
 import ToyCard from "../ToyCard";
+import { BsArrowUpRightSquare } from "react-icons/bs";
 
 const CategoryTabs = () => {
   const [toys, setToys] = useState([]);
@@ -9,7 +10,7 @@ const CategoryTabs = () => {
   useEffect(() => {
     fetch(`https://botboy.vercel.app/toys-category?category=${category}`)
       .then((res) => res.json())
-      .then((data) => setToys(data));
+      .then((data) => setToys(data.slice(0, 4)));
   }, [category]);
 
   const DisplayToys = ({ toys }) => {
@@ -47,6 +48,14 @@ const CategoryTabs = () => {
           <DisplayToys toys={toys} />
         </TabPanel>
       </Tabs>
+      <p
+        data-aos="fade-up"
+        data-aos-duration="1000"
+        className="underline select-none w-40 mt-8 text-sm text-mainColor justify-end items-center flex gap-x-2 cursor-pointer"
+      >
+        <span>See More Categories</span>
+        <BsArrowUpRightSquare />
+      </p>
     </section>
   );
 };

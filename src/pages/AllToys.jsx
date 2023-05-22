@@ -6,6 +6,7 @@ import useTitle from "../hooks/useTitle";
 const AllToys = () => {
   const [toys, setToys] = useState([]);
   const [error, setError] = useState("");
+  const [sortedValue, setSortedValue] = useState("ascending");
   useTitle("All Toys");
 
   const handleSearch = (e) => {
@@ -24,13 +25,13 @@ const AllToys = () => {
   };
 
   useEffect(() => {
-    fetch("https://botboy.vercel.app/toys")
+    fetch(`https://botboy.vercel.app/toys?sorting=${sortedValue}`)
       .then((res) => res.json())
       .then((data) => setToys(data));
-  }, []);
+  }, [sortedValue]);
   return (
     <>
-      <header className="bg-mainColor py-6 flex flex-col justify-center items-center gap-4">
+      <header className="bg-mainColor py-6 flex flex-col justify-center items-center gap-4 relative">
         <h4 className="lg:text-5xl text-2xl font-bold text-white">All Toys</h4>
         <div className="form-control">
           <form
@@ -51,6 +52,14 @@ const AllToys = () => {
             </button>
           </form>
         </div>
+        <select
+          value={sortedValue}
+          onChange={(e) => setSortedValue(e.target.value)}
+          className="absolute top-1 lg:bottom-4 lg:right-20 right-1 lg:input"
+        >
+          <option value="ascending">Ascending</option>
+          <option value="descending">Descending</option>
+        </select>
       </header>
 
       {error ? (
