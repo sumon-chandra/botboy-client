@@ -15,6 +15,7 @@ const AddToy = () => {
     const picture = form.photoURL.value;
     const seller_name = form.seller_name.value;
     const seller_email = form.seller_email.value;
+    const description = form.description.value;
     const toyInfo = {
       toy_name,
       price: `$${price}`,
@@ -23,6 +24,7 @@ const AddToy = () => {
       category,
       seller_name,
       seller_email,
+      description,
     };
     fetch("https://botboy.vercel.app/my-toys", {
       method: "POST",

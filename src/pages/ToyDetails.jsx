@@ -73,7 +73,12 @@ const ToyDetails = () => {
             )}
 
             <p className="flex items-center gap-x-2 font-bold text-sm">
-              <ReactStars size={20} value={toy.rating} edit={false} />
+              <ReactStars
+                activeColor={"red"}
+                size={20}
+                value={toy.rating}
+                edit={false}
+              />
               <span>{toy.rating}</span>
             </p>
           </div>
