@@ -1,5 +1,6 @@
 import AboutService from "../components/home/AboutService";
 import Banner from "../components/home/Banner";
+import CategoryCard from "../components/home/CategoryCard";
 import CategoryTabs from "../components/home/CategoryTabs";
 import FlashSell from "../components/home/FlashSell";
 import FlatDiscount from "../components/home/FlatDiscount";
@@ -15,6 +16,7 @@ const Home = () => {
       <Banner />
       <AboutService />
       <FlashSell />
+      <CategoryCard />
       <FlatDiscount />
       <CategoryTabs />
       <SpecialDiscount />

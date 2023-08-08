@@ -11,7 +11,7 @@ const ToyCard = ({ toy, allToys }) => {
     <Link
       to={`/toys/${toy._id}`}
       key={toy._id}
-      className="relative z-0 w-full mb-4 border border-indigo-100 rounded-lg shadow-xl card lg:mb-0"
+      className="relative z-0 w-full mb-4 bg-white border border-indigo-100 rounded-lg shadow-xl card lg:mb-0"
     >
       <figure className="h-32">
         <img src={toy.picture} alt={toy.toy_name} className="z-10 w-20" />
