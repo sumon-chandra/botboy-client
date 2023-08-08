@@ -19,7 +19,7 @@ const SpecialProducts = () => {
           Only For You !
         </h4>
       </div>
-      <div className="grid-cols-4 mt-8 lg:grid gap-x-4 gap-y-6">
+      <div className="grid-cols-3 mt-8 lg:grid gap-x-4 gap-y-6">
         {toys.map((toy) => (
           <ToyCard key={toy._id} toy={toy} />
         ))}

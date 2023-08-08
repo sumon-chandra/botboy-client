@@ -11,12 +11,12 @@ const ToyCard = ({ toy, allToys }) => {
     <Link
       to={`/toys/${toy._id}`}
       key={toy._id}
-      className="relative z-0 w-full mb-4 bg-white border border-indigo-100 rounded-lg shadow-xl card lg:mb-0"
+      className="relative z-0 flex items-center justify-between w-full p-6 mb-4 bg-white border border-indigo-100 rounded-lg shadow-xl lg:mb-0"
     >
-      <figure className="h-32">
-        <img src={toy.picture} alt={toy.toy_name} className="z-10 w-20" />
+      <figure className="w-32">
+        <img src={toy.picture} alt={toy.toy_name} />
       </figure>
-      <div className="card-body">
+      <div className="">
         <div className="text-sm font-bold text-mainColor">
           <p>{toy.toy_name} </p>
           {allToys && (
@@ -25,16 +25,16 @@ const ToyCard = ({ toy, allToys }) => {
             </p>
           )}
         </div>
-        <div className="flex items-center justify-between py-2">
+        <div className="items-center justify-between py-2 ">
           {toy.discount ? (
-            <p className="text-xl font-bold">
+            <p className="font-bold">
               {toy.discount_price}{" "}
               <span className="text-xs font-normal line-through">
                 {toy.price}
               </span>
             </p>
           ) : (
-            <p className="text-xl font-bold">{toy.price}</p>
+            <p className="font-bold">{toy.price}</p>
           )}
 
           <p className="flex items-center justify-end text-sm font-bold gap-x-2">

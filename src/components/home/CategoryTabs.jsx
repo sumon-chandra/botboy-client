@@ -15,7 +15,7 @@ const CategoryTabs = () => {
 
   const DisplayToys = ({ toys }) => {
     return (
-      <div className="items-center justify-between gap-6 lg:flex lg:pt-10">
+      <div className="grid-cols-3 gap-6 pt-10 lg:grid">
         {toys.map((toy) => (
           <ToyCard key={toy._id} toy={toy} />
         ))}
