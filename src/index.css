@@ -6,6 +6,9 @@ body {
   background-color: #e6f3ff;
 }
 @layer components {
+  .nav-btn {
+    @apply px-6 py-2 font-bold uppercase rounded-none cursor-pointer;
+  }
   .tab-btn {
     @apply px-6 py-2 font-bold uppercase cursor-pointer focus:outline-none;
   }
