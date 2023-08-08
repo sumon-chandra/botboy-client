@@ -31,12 +31,14 @@ const AllToys = () => {
   }, [sortedValue]);
   return (
     <>
-      <header className="bg-mainColor py-6 flex flex-col justify-center items-center gap-4 relative">
-        <h4 className="lg:text-5xl text-2xl font-bold text-white">All Toys</h4>
+      <header className="relative flex flex-col items-center justify-center gap-4 py-6 bg-mainColor">
+        <h4 className="text-2xl font-bold text-white lg:text-5xl font-head">
+          All Toys
+        </h4>
         <div className="form-control">
           <form
             onSubmit={handleSearch}
-            className="input-group  border-4 border-secColor rounded-lg shadow-lg"
+            className="border-4 rounded-lg shadow-lg input-group border-secColor"
           >
             <input
               type="text"
@@ -46,7 +48,7 @@ const AllToys = () => {
             />
             <button
               type="submit"
-              className="btn btn-sm border-l-2 border-r-0 border-b-0 border-t-0 border-secColor bg-white hover:bg-gray-100 text-mainColor text-xl font-black"
+              className="text-xl font-black bg-white border-t-0 border-b-0 border-l-2 border-r-0 btn btn-sm border-secColor hover:bg-gray-100 text-mainColor"
             >
               <FiSearch />
             </button>
@@ -63,10 +65,10 @@ const AllToys = () => {
       </header>
 
       {error ? (
-        <div className="min-h-screen flex items-center justify-center">
-          <div className="bg-slate-100 p-6">
+        <div className="flex items-center justify-center min-h-screen">
+          <div className="p-6 bg-slate-100">
             <p>
-              <span className="text-red-500 text-4xl font-black">
+              <span className="text-4xl font-black text-red-500">
                 {error} !
               </span>
             </p>
@@ -74,7 +76,7 @@ const AllToys = () => {
           </div>
         </div>
       ) : (
-        <main className="lg:grid grid-cols-4 gap-x-4 gap-y-7 px-4 lg:px-20 py-20">
+        <main className="grid-cols-4 px-4 py-20 lg:grid gap-x-4 gap-y-7 lg:px-20">
           {toys.map((toy) => (
             <ToyCard allToys={true} toy={toy} key={toy._id} />
           ))}

@@ -9,7 +9,7 @@ const FlatDiscount = () => {
         />
         <div className="absolute left-0 right-0 top-0 bottom-0 bg-gradient-to-l from-[#ffffffd0] to-[#03030343] text-right lg:pt-20 pt-14 px-6 rounded-xl">
           <p>15% Flat Discount</p>
-          <p className="text-2xl font-bold lg:text-4xl">
+          <p className="text-2xl font-bold lg:text-4xl font-head">
             Happy Christmas <br /> Day
           </p>
           <p className="mt-5 font-bold underline text-mainColor">Shop Now</p>
@@ -23,7 +23,7 @@ const FlatDiscount = () => {
         />
         <div className="absolute left-0 right-0 top-0 bottom-0 bg-gradient-to-l from-[#ffffffd0] to-[#03030343] text-right lg:pt-20 pt-14 px-6 rounded-xl">
           <p>20% Flat Discount</p>
-          <p className="text-2xl font-bold lg:text-4xl">
+          <p className="text-2xl font-bold lg:text-4xl font-head">
             Luvlap Baby <br /> Stroller
           </p>
           <p className="mt-5 font-bold underline text-mainColor">Shop Now</p>
@@ -37,7 +37,7 @@ const FlatDiscount = () => {
         />
         <div className="absolute left-0 right-0 top-0 bottom-0 bg-gradient-to-l from-[#ffffffd0] to-[#03030343] text-right lg:pt-20 pt-14 px-6 rounded-xl">
           <p>30% Flat Discount</p>
-          <p className="text-2xl font-bold lg:text-4xl">
+          <p className="text-2xl font-bold lg:text-4xl font-head">
             Little Supermen <br /> Toys
           </p>
           <p className="mt-5 font-bold underline text-mainColor">Shop Now</p>

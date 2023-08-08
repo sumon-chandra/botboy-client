@@ -1,13 +1,13 @@
 const Gallery = () => {
   return (
-    <section className="lg:px-20 px-4 lg:py-20 py-10">
+    <section className="px-4 py-10 lg:px-20 lg:py-20">
       <div data-aos="fade-up" data-aos-duration="1000" className="text-center">
         <p className="text-[12px]">Our Gallery</p>
-        <h4 className="lg:text-5xl text-2xl font-bold text-mainColor">
+        <h4 className="text-2xl font-bold lg:text-5xl text-mainColor font-head">
           Explore Our Gallery Section
         </h4>
       </div>
-      <div className="mt-8 grid grid-cols-2 lg:grid-cols-4 gap-4 ">
+      <div className="grid grid-cols-2 gap-4 mt-8 lg:grid-cols-4 ">
         <div className="grid gap-4">
           <div>
             <img
@@ -15,7 +15,7 @@ const Gallery = () => {
               alt="gallery image"
               data-aos="fade-up"
               data-aos-duration="1000"
-              className="h-auto max-w-full duration-500 cursor-pointer hover:scale-110 rounded-lg"
+              className="h-auto max-w-full duration-500 rounded-lg cursor-pointer hover:scale-110"
             />
           </div>
           <div>
@@ -24,7 +24,7 @@ const Gallery = () => {
               alt="gallery image"
               data-aos="fade-up"
               data-aos-duration="1000"
-              className="h-auto max-w-full duration-500 cursor-pointer hover:scale-110 rounded-lg"
+              className="h-auto max-w-full duration-500 rounded-lg cursor-pointer hover:scale-110"
             />
           </div>
           <div>
@@ -33,7 +33,7 @@ const Gallery = () => {
               alt="gallery image"
               data-aos="fade-up"
               data-aos-duration="1000"
-              className="h-auto max-w-full duration-500 cursor-pointer hover:scale-110 rounded-lg"
+              className="h-auto max-w-full duration-500 rounded-lg cursor-pointer hover:scale-110"
             />
           </div>
           <div>
@@ -42,7 +42,7 @@ const Gallery = () => {
               alt="gallery image"
               data-aos="fade-up"
               data-aos-duration="1000"
-              className="h-auto max-w-full duration-500 cursor-pointer hover:scale-110 rounded-lg"
+              className="h-auto max-w-full duration-500 rounded-lg cursor-pointer hover:scale-110"
             />
           </div>
         </div>
@@ -53,7 +53,7 @@ const Gallery = () => {
               alt="gallery image"
               data-aos="fade-up"
               data-aos-duration="1000"
-              className="h-auto max-w-full duration-500 cursor-pointer hover:scale-110 rounded-lg"
+              className="h-auto max-w-full duration-500 rounded-lg cursor-pointer hover:scale-110"
             />
           </div>
           <div>
@@ -62,7 +62,7 @@ const Gallery = () => {
               alt="gallery image"
               data-aos="fade-up"
               data-aos-duration="1000"
-              className="h-auto max-w-full duration-500 cursor-pointer hover:scale-110 rounded-lg"
+              className="h-auto max-w-full duration-500 rounded-lg cursor-pointer hover:scale-110"
             />
           </div>
           <div>
@@ -71,7 +71,7 @@ const Gallery = () => {
               alt="gallery image"
               data-aos="fade-up"
               data-aos-duration="1000"
-              className="h-auto max-w-full duration-500 cursor-pointer hover:scale-110 rounded-lg"
+              className="h-auto max-w-full duration-500 rounded-lg cursor-pointer hover:scale-110"
             />
           </div>
           <div>
@@ -80,7 +80,7 @@ const Gallery = () => {
               alt="gallery image"
               data-aos="fade-up"
               data-aos-duration="1000"
-              className="h-auto max-w-full duration-500 cursor-pointer hover:scale-110 rounded-lg"
+              className="h-auto max-w-full duration-500 rounded-lg cursor-pointer hover:scale-110"
             />
           </div>
         </div>
@@ -91,7 +91,7 @@ const Gallery = () => {
               alt="gallery image"
               data-aos="fade-up"
               data-aos-duration="1000"
-              className="h-auto max-w-full duration-500 cursor-pointer hover:scale-110 rounded-lg"
+              className="h-auto max-w-full duration-500 rounded-lg cursor-pointer hover:scale-110"
             />
           </div>
           <div>
@@ -100,7 +100,7 @@ const Gallery = () => {
               alt="gallery image"
               data-aos="fade-up"
               data-aos-duration="1000"
-              className="h-auto max-w-full duration-500 cursor-pointer hover:scale-110 rounded-lg"
+              className="h-auto max-w-full duration-500 rounded-lg cursor-pointer hover:scale-110"
             />
           </div>
           <div>
@@ -109,7 +109,7 @@ const Gallery = () => {
               alt="gallery image"
               data-aos="fade-up"
               data-aos-duration="1000"
-              className="h-auto max-w-full duration-500 cursor-pointer hover:scale-110 rounded-lg"
+              className="h-auto max-w-full duration-500 rounded-lg cursor-pointer hover:scale-110"
             />
           </div>
           <div>
@@ -118,7 +118,7 @@ const Gallery = () => {
               alt="gallery image"
               data-aos="fade-up"
               data-aos-duration="1000"
-              className="h-auto max-w-full duration-500 cursor-pointer hover:scale-110 rounded-lg"
+              className="h-auto max-w-full duration-500 rounded-lg cursor-pointer hover:scale-110"
             />
           </div>
         </div>
@@ -129,7 +129,7 @@ const Gallery = () => {
               alt="gallery image"
               data-aos="fade-up"
               data-aos-duration="1000"
-              className="h-auto max-w-full duration-500 cursor-pointer hover:scale-110 rounded-lg"
+              className="h-auto max-w-full duration-500 rounded-lg cursor-pointer hover:scale-110"
             />
           </div>
           <div>
@@ -138,7 +138,7 @@ const Gallery = () => {
               alt="gallery image"
               data-aos="fade-up"
               data-aos-duration="1000"
-              className="h-auto max-w-full duration-500 cursor-pointer hover:scale-110 rounded-lg"
+              className="h-auto max-w-full duration-500 rounded-lg cursor-pointer hover:scale-110"
             />
           </div>
           <div>
@@ -147,7 +147,7 @@ const Gallery = () => {
               alt="gallery image"
               data-aos="fade-up"
               data-aos-duration="1000"
-              className="h-auto max-w-full duration-500 cursor-pointer hover:scale-110 rounded-lg"
+              className="h-auto max-w-full duration-500 rounded-lg cursor-pointer hover:scale-110"
             />
           </div>
         </div>

@@ -47,7 +47,7 @@ const MyToys = () => {
       });
   };
   return !loading ? (
-    <div className="w-full min-h-screen flex items-center justify-center">
+    <div className="flex items-center justify-center w-full min-h-screen">
       <Circles
         height="80"
         width="80"
@@ -60,13 +60,13 @@ const MyToys = () => {
     </div>
   ) : (
     <>
-      <div className="bg-mainColor py-6">
-        <h4 className="lg:text-5xl text-2xl font-bold text-white text-center">
+      <div className="py-6 bg-mainColor">
+        <h4 className="text-2xl font-bold text-center text-white lg:text-5xl font-head">
           My Toys
         </h4>
       </div>
-      <section className="w-3/4 mx-auto lg:my-20 my-10">
-        <div className="lg:grid hidden grid-cols-12 items-center mb-6 bg-slate-300 p-4 font-bold rounded-t-lg">
+      <section className="w-3/4 mx-auto my-10 lg:my-20">
+        <div className="items-center hidden grid-cols-12 p-4 mb-6 font-bold rounded-t-lg lg:grid bg-slate-300">
           <p>#</p>
           <p className="col-span-1 ">Image</p>
           <p className="col-span-6">Toy Name</p>
@@ -77,17 +77,17 @@ const MyToys = () => {
         {toys.map((toy, index) => (
           <div
             key={toy._id}
-            className="relative lg:grid grid-cols-12 lg:items-center items-start mb-6 bg-slate-100 p-4 flex flex-col rounded-lg"
+            className="relative flex flex-col items-start grid-cols-12 p-4 mb-6 rounded-lg lg:grid lg:items-center bg-slate-100"
           >
-            <p className="font-bold lg:static absolute right-2 top-2">
+            <p className="absolute font-bold lg:static right-2 top-2">
               {index + 1}
             </p>
             <img
               src={toy.picture}
               alt=""
-              className="w-14 h-20 col-span-1 object-cover"
+              className="object-cover h-20 col-span-1 w-14"
             />
-            <p className="font-bold col-span-6 lg:w-full w-11/12">
+            <p className="w-11/12 col-span-6 font-bold lg:w-full">
               {toy.toy_name}
             </p>
             <p>
@@ -97,15 +97,15 @@ const MyToys = () => {
               <span className="lg:hidden"> Category: </span>{" "}
               {toy.category ? toy.category : "No category selected"}
             </p>
-            <div className="col-span-2 flex lg:flex-row justify-end gap-6 items-start lg:static absolute top-10 right-4 flex-col">
+            <div className="absolute flex flex-col items-start justify-end col-span-2 gap-6 lg:flex-row lg:static top-10 right-4">
               <Link to={`/update-toys/${toy._id}`}>
-                <FaEdit className="text-xl font-black text-secColor cursor-pointer" />
+                <FaEdit className="text-xl font-black cursor-pointer text-secColor" />
               </Link>
               <span onClick={() => handleDelete(toy._id)}>
-                <FaTrashAlt className="text-xl font-black text-secColor cursor-pointer" />
+                <FaTrashAlt className="text-xl font-black cursor-pointer text-secColor" />
               </span>
               <Link to={`/toys/personal${toy._id}`}>
-                <FaExternalLinkAlt className="text-xl font-black text-secColor cursor-pointer" />
+                <FaExternalLinkAlt className="text-xl font-black cursor-pointer text-secColor" />
               </Link>
             </div>
           </div>

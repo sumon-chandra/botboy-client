@@ -16,15 +16,15 @@ const Banner = () => {
       className=" h-56 lg:h-[500px] relative"
     >
       <SwiperSlide className="bg-[url('https://i.ibb.co/L1Jcw3T/banner-01.png')] bg-left bg-cover py-10 bg-slate-300">
-        <div className="absolute lg:right-20 right-4 lg:pt-24 pt-6 text-right ">
+        <div className="absolute pt-6 text-right lg:right-20 right-4 lg:pt-24 ">
           <div data-aos="fade-up" data-aos-duration="1000">
-            <p className=" lg:text-xl text-sm">Exclusive Offer On Toys</p>
-            <h3 className="lg:text-7xl text-2xl font-bold">
+            <p className="text-sm lg:text-xl">Exclusive Offer On Toys</p>
+            <h3 className="text-2xl font-bold lg:text-7xl font-head">
               Kids Playing With <br /> Block Toys
             </h3>
             <a
               href="#"
-              className="lg:px-6 lg:py-2 btn lg:btn-md btn-sm border-0 normal-case font-semibold lg:mt-6 mt-2 lg:text-xl text-xs text-white bg-gradient-to-br from-mainColor to-secColor rounded-3xl hover:bg-gradient-to-tl"
+              className="mt-2 text-xs font-semibold text-white normal-case border-0 lg:px-6 lg:py-2 btn lg:btn-md btn-sm lg:mt-6 lg:text-xl bg-gradient-to-br from-mainColor to-secColor rounded-3xl hover:bg-gradient-to-tl"
             >
               Shop Now
             </a>
@@ -32,15 +32,15 @@ const Banner = () => {
         </div>
       </SwiperSlide>
       <SwiperSlide className="bg-[url('https://i.ibb.co/TbW5yBq/banner-01-2.png')] bg-left bg-cover py-10 bg-slate-300">
-        <div className="absolute lg:right-20 right-4 lg:pt-24 pt-6 text-right ">
+        <div className="absolute pt-6 text-right lg:right-20 right-4 lg:pt-24 ">
           <div data-aos="fade-up" data-aos-duration="1000">
-            <p className=" lg:text-xl text-sm">Exclusive Offer On Toys</p>
-            <h3 className="lg:text-7xl text-2xl font-bold">
+            <p className="text-sm lg:text-xl">Exclusive Offer On Toys</p>
+            <h3 className="text-2xl font-bold lg:text-7xl font-head">
               Make Kids happy <br /> & Healthy
             </h3>
             <a
               href="#"
-              className="lg:px-6 lg:py-2 btn lg:btn-md btn-sm border-0 normal-case font-semibold lg:mt-6 mt-2 lg:text-xl text-xs text-white bg-gradient-to-br from-mainColor to-secColor rounded-3xl hover:bg-gradient-to-tl"
+              className="mt-2 text-xs font-semibold text-white normal-case border-0 lg:px-6 lg:py-2 btn lg:btn-md btn-sm lg:mt-6 lg:text-xl bg-gradient-to-br from-mainColor to-secColor rounded-3xl hover:bg-gradient-to-tl"
             >
               Shop Now
             </a>
@@ -48,15 +48,15 @@ const Banner = () => {
         </div>
       </SwiperSlide>
       <SwiperSlide className="bg-[url('https://i.ibb.co/8K4y5Zw/banner-01-4.png')] bg-left bg-cover py-10 bg-slate-300">
-        <div className="absolute lg:right-20 right-4 lg:pt-24 pt-6 text-right ">
+        <div className="absolute pt-6 text-right lg:right-20 right-4 lg:pt-24 ">
           <div data-aos="fade-up" data-aos-duration="1000">
-            <p className=" lg:text-xl text-sm">Exclusive Offer On Toys</p>
-            <h3 className="lg:text-7xl text-2xl font-bold">
+            <p className="text-sm lg:text-xl">Exclusive Offer On Toys</p>
+            <h3 className="text-2xl font-bold lg:text-7xl font-head">
               Kids Playing With <br /> Block Toys
             </h3>
             <a
               href="#"
-              className="lg:px-6 lg:py-2 btn lg:btn-md btn-sm border-0 normal-case font-semibold lg:mt-6 mt-2 lg:text-xl text-xs text-white bg-gradient-to-br from-mainColor to-secColor rounded-3xl hover:bg-gradient-to-tl"
+              className="mt-2 text-xs font-semibold text-white normal-case border-0 lg:px-6 lg:py-2 btn lg:btn-md btn-sm lg:mt-6 lg:text-xl bg-gradient-to-br from-mainColor to-secColor rounded-3xl hover:bg-gradient-to-tl"
             >
               Shop Now
             </a>
@@ -64,15 +64,15 @@ const Banner = () => {
         </div>
       </SwiperSlide>
       <SwiperSlide className="bg-[url('https://i.ibb.co/xf5tFzV/banner-01-1.png')] bg-left bg-cover py-10 bg-slate-300">
-        <div className="absolute lg:right-20 right-4 lg:pt-24 pt-6 text-right ">
+        <div className="absolute pt-6 text-right lg:right-20 right-4 lg:pt-24 ">
           <div data-aos="fade-up" data-aos-duration="1000">
-            <p className=" lg:text-xl text-sm">Exclusive Offer On Toys</p>
-            <h3 className="lg:text-7xl text-2xl font-bold">
+            <p className="text-sm lg:text-xl">Exclusive Offer On Toys</p>
+            <h3 className="text-2xl font-bold lg:text-7xl">
               Kids Playing With <br /> Block Toys
             </h3>
             <a
               href="#"
-              className="lg:px-6 lg:py-2 btn lg:btn-md btn-sm border-0 normal-case font-semibold lg:mt-6 mt-2 lg:text-xl text-xs text-white bg-gradient-to-br from-mainColor to-secColor rounded-3xl hover:bg-gradient-to-tl"
+              className="mt-2 text-xs font-semibold text-white normal-case border-0 lg:px-6 lg:py-2 btn lg:btn-md btn-sm lg:mt-6 lg:text-xl bg-gradient-to-br from-mainColor to-secColor rounded-3xl hover:bg-gradient-to-tl"
             >
               Shop Now
             </a>

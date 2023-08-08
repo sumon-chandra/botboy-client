@@ -35,12 +35,12 @@ const ToyDetails = () => {
   }, [url]);
   return (
     <>
-      <div className="bg-mainColor py-6">
-        <h4 className="lg:text-5xl text-2xl font-bold text-white text-center">
+      <div className="py-6 bg-mainColor">
+        <h4 className="text-2xl font-bold text-center text-white lg:text-5xl font-head">
           {toy.toy_name} - Details
         </h4>
       </div>
-      <div className="lg:p-20 py-8 px-4 lg:grid grid-cols-5 gap-20">
+      <div className="grid-cols-5 gap-20 px-4 py-8 lg:p-20 lg:grid">
         <div
           data-aos="fade-right"
           data-aos-duration="1000"
@@ -51,20 +51,20 @@ const ToyDetails = () => {
         <div
           data-aos="fade-left"
           data-aos-duration="1000"
-          className="col-span-3 mt-8 lg:mt-0 border-l-4 border-mainColor px-6"
+          className="col-span-3 px-6 mt-8 border-l-4 lg:mt-0 border-mainColor"
         >
-          <div className="font-bold lg:text-7xl text-2xl text-mainColor">
+          <div className="text-2xl font-bold lg:text-7xl text-mainColor">
             <p>{toy.toy_name} </p>
-            <p className="lg:text-sm text-xs lg:mt-4 text-gray-400">
+            <p className="text-xs text-gray-400 lg:text-sm lg:mt-4">
               ( {toy.quantity} piece available )
             </p>
           </div>
           <h4 className="pt-3 font-bold">Category: {toy.category}</h4>
-          <div className=" py-4">
+          <div className="py-4 ">
             {toy.discount ? (
               <p className="text-xl font-bold">
                 {toy.discount_price}{" "}
-                <span className="text-xs line-through font-normal">
+                <span className="text-xs font-normal line-through">
                   {toy.price}
                 </span>
               </p>
@@ -72,7 +72,7 @@ const ToyDetails = () => {
               <p className="text-xl font-bold">{toy.price}</p>
             )}
 
-            <p className="flex items-center gap-x-2 font-bold text-sm">
+            <p className="flex items-center text-sm font-bold gap-x-2">
               <ReactStars
                 activeColor={"red"}
                 size={20}

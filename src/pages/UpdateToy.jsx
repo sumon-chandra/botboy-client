@@ -47,9 +47,9 @@ const UpdateToy = () => {
   };
   return (
     <div className="hero min-h-screen lg:py-20 py-10 lg:bg-[url('https://i.ibb.co/zSfz9Pf/pattern.png')]">
-      <div className="hero-content flex-col">
-        <div className="text-center pb-4">
-          <h1 className="lg:text-5xl text-3xl text-mainColor font-bold">
+      <div className="flex-col hero-content">
+        <div className="pb-4 text-center">
+          <h1 className="text-3xl font-bold lg:text-5xl font-head text-mainColor">
             Create A New Toy !
           </h1>
         </div>
@@ -73,7 +73,7 @@ const UpdateToy = () => {
               </label>
               <select
                 onChange={(e) => setCategory(e.target.value)}
-                className="dropdown w-full p-3 input text-gray-400"
+                className="w-full p-3 text-gray-400 dropdown input"
               >
                 <option value="">Select</option>
                 <option value="marvel">Marvel</option>
@@ -104,10 +104,10 @@ const UpdateToy = () => {
                 className="input input-bordered"
               />
             </div> */}
-            <div className="form-control mt-6">
+            <div className="mt-6 form-control">
               <button
                 type="submit"
-                className="w-full lg:w-1/2 mx-auto lg:px-4 lg:py-2 text-lg text-white bg-gradient-to-br from-mainColor to-secColor rounded-md hover:bg-gradient-to-tl"
+                className="w-full mx-auto text-lg text-white rounded-md lg:w-1/2 lg:px-4 lg:py-2 bg-gradient-to-br from-mainColor to-secColor hover:bg-gradient-to-tl"
               >
                 Update Toy
               </button>

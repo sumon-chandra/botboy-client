@@ -15,7 +15,7 @@ const CategoryTabs = () => {
 
   const DisplayToys = ({ toys }) => {
     return (
-      <div className="lg:flex justify-between items-center gap-6 lg:pt-10">
+      <div className="items-center justify-between gap-6 lg:flex lg:pt-10">
         {toys.map((toy) => (
           <ToyCard key={toy._id} toy={toy} />
         ))}
@@ -24,18 +24,24 @@ const CategoryTabs = () => {
   };
 
   return (
-    <section className="lg:px-20 px-4 lg:py-20 py-10">
-      <div data-aos="fade-up" data-aos-duration="1000" className="text-center">
+    <section className="px-4 py-10 lg:px-20 lg:py-20">
+      <div className="text-center">
         <p className="text-[12px]">Categories</p>
-        <h4 className="lg:text-5xl text-2xl font-bold text-mainColor">
+        <h4 className="text-2xl font-bold lg:text-5xl text-mainColor font-head">
           Explore Our Categories
         </h4>
       </div>
-      <Tabs>
-        <TabList>
-          <Tab onClick={() => setCategory("marvel")}>Marvel</Tab>
-          <Tab onClick={() => setCategory("avengers")}>Avengers</Tab>
-          <Tab onClick={() => setCategory("dc")}>DC</Tab>
+      <Tabs className="mt-8 lg:mt-20">
+        <TabList className="flex items-center justify-center home-tabs">
+          <Tab className="tab-btn" onClick={() => setCategory("marvel")}>
+            Marvel
+          </Tab>
+          <Tab className="tab-btn" onClick={() => setCategory("avengers")}>
+            Avengers
+          </Tab>
+          <Tab className="tab-btn" onClick={() => setCategory("dc")}>
+            DC
+          </Tab>
         </TabList>
 
         <TabPanel>
@@ -48,11 +54,7 @@ const CategoryTabs = () => {
           <DisplayToys toys={toys} />
         </TabPanel>
       </Tabs>
-      <p
-        data-aos="fade-up"
-        data-aos-duration="1000"
-        className="underline select-none w-40 mt-8 text-sm text-mainColor justify-end items-center flex gap-x-2 cursor-pointer"
-      >
+      <p className="flex items-center justify-end w-40 mt-8 text-sm underline cursor-pointer select-none text-mainColor gap-x-2">
         <span>See More Categories</span>
         <BsArrowUpRightSquare />
       </p>

@@ -7,6 +7,9 @@ export default {
         mainColor: "#6366f1",
         secColor: "#4f46e5",
       },
+      fontFamily: {
+        head: "Maven Pro",
+      },
     },
   },
   plugins: [require("daisyui")],

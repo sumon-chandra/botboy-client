@@ -1,6 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Maven+Pro:wght@800&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 body {
   background-color: #e6f3ff;
+}
+@layer components {
+  .tab-btn {
+    @apply px-6 py-2 font-bold uppercase cursor-pointer focus:outline-none;
+  }
+}
+.react-tabs__tab--selected {
+  background-color: #6366f1 !important;
+  border: none !important;
+  color: white !important;
+  border-radius: 3em !important;
 }

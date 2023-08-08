@@ -14,15 +14,15 @@ const FlashSell = () => {
       .then((data) => setToys(data));
   }, []);
   return (
-    <div className="lg:mx-20 lg:my-20 m-4">
-      <div className="flex justify-between items-start">
+    <div className="m-4 lg:mx-20 lg:my-20">
+      <div className="flex items-start justify-between">
         <div className="lg:flex gap-x-2">
-          <h4 className="lg:text-5xl mb-4 text-2xl font-bold text-mainColor">
+          <h4 className="mb-4 text-2xl font-bold lg:text-5xl text-mainColor font-head">
             Flash Sale
           </h4>
           <Countdown duration={1 * 24 * 60 * 60 * 1000} />
         </div>
-        <p className="underline text-sm text-mainColor justify-end items-center flex gap-x-2 cursor-pointer">
+        <p className="flex items-center justify-end text-sm underline cursor-pointer text-mainColor gap-x-2">
           <span>See More</span>
           <BsArrowUpRightSquare />
         </p>
@@ -51,7 +51,7 @@ const FlashSell = () => {
         }}
         modules={[Autoplay]}
         style={{ padding: "1rem !important" }}
-        className="lg:flex justify-between items-center border border-mainColor"
+        className="items-center justify-between border lg:flex border-mainColor"
       >
         {toys?.map((toy) => (
           <SwiperSlide key={toy._id} className="py-4">

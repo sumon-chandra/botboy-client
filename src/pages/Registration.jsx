@@ -47,16 +47,16 @@ const Registration = () => {
 
   return (
     <div className="hero min-h-screen lg:bg-[url('https://i.ibb.co/zSfz9Pf/pattern.png')]">
-      <div className="hero-content flex-col">
-        <div className="text-center pb-4">
-          <h1 className="lg:text-5xl text-3xl text-mainColor font-bold">
+      <div className="flex-col hero-content">
+        <div className="pb-4 text-center">
+          <h1 className="text-3xl font-bold lg:text-5xl font-head text-mainColor">
             Register now!
           </h1>
         </div>
-        <div className="card border border-mainColor bg-base-200">
+        <div className="border card border-mainColor bg-base-200">
           <form
             onSubmit={handleSubmit}
-            className="lg:grid grid-cols-2 p-10 gap-x-8 gap-y-1"
+            className="grid-cols-2 p-10 lg:grid gap-x-8 gap-y-1"
           >
             <div className="form-control">
               <label className="label">
@@ -83,7 +83,7 @@ const Registration = () => {
                 className="input input-bordered"
               />
             </div>
-            <div className="form-control col-span-2">
+            <div className="col-span-2 form-control">
               <label className="label">
                 <span className="label-text">Photo URL</span>
               </label>
@@ -124,15 +124,15 @@ const Registration = () => {
                 </a>
               </label>
             </div>
-            <div className="form-control mt-6 col-span-2">
+            <div className="col-span-2 mt-6 form-control">
               {error && (
-                <p className="text-red-600 text-sm font-semibold italic mb-2">
+                <p className="mb-2 text-sm italic font-semibold text-red-600">
                   {error}
                 </p>
               )}
               <button
                 type="submit"
-                className="w-full lg:w-1/2 mx-auto lg:px-4 lg:py-2 text-lg text-white bg-gradient-to-br from-mainColor to-secColor rounded-md hover:bg-gradient-to-tl"
+                className="w-full mx-auto text-lg text-white rounded-md lg:w-1/2 lg:px-4 lg:py-2 bg-gradient-to-br from-mainColor to-secColor hover:bg-gradient-to-tl"
               >
                 Register
               </button>
@@ -141,13 +141,13 @@ const Registration = () => {
               <p className="divider">OR</p>
               <p
                 onClick={handleGoogleLogin}
-                className="w-full lg:w-1/2 mx-auto text-sm font-semibold flex items-center justify-center rounded gap-x-2 bg-indigo-100 border border-mainColor py-1 cursor-pointer"
+                className="flex items-center justify-center w-full py-1 mx-auto text-sm font-semibold bg-indigo-100 border rounded cursor-pointer lg:w-1/2 gap-x-2 border-mainColor"
               >
                 <FaGoogle />
                 <span>Continue with Google</span>
               </p>
             </div>
-            <p className="text-xs mt-3">
+            <p className="mt-3 text-xs">
               Already have an account?{" "}
               <Link to="/login" className="underline">
                 Login now

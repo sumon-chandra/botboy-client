@@ -12,14 +12,14 @@ const SpecialProducts = () => {
       .then((data) => setToys(data));
   }, []);
   return (
-    <section className="lg:px-20 px-4 lg:py-20 py-10">
-      <div data-aos="fade-up" data-aos-duration="1000" className="text-center">
+    <section className="px-4 py-10 lg:px-20 lg:py-20">
+      <div className="text-center">
         <p className="text-[12px]">Special Toys</p>
-        <h4 className="lg:text-5xl text-2xl font-bold text-mainColor">
+        <h4 className="text-2xl font-bold lg:text-5xl text-mainColor font-head">
           Only For You !
         </h4>
       </div>
-      <div className="mt-8 lg:grid grid-cols-4 gap-x-4 gap-y-6">
+      <div className="grid-cols-4 mt-8 lg:grid gap-x-4 gap-y-6">
         {toys.map((toy) => (
           <ToyCard key={toy._id} toy={toy} />
         ))}
@@ -28,7 +28,7 @@ const SpecialProducts = () => {
         data-aos="fade-up"
         data-aos-duration="1000"
         to="/all-toys"
-        className="underline w-24 mt-8 text-sm text-mainColor justify-end items-center flex gap-x-2 cursor-pointer"
+        className="flex items-center justify-end w-24 mt-8 text-sm underline cursor-pointer text-mainColor gap-x-2"
       >
         <span>See More</span>
         <BsArrowUpRightSquare />
