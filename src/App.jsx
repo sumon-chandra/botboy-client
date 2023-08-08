@@ -11,7 +11,6 @@ import RootLayout from "./layouts/RootLayout";
 import Home from "./pages/home";
 import Login from "./pages/Login";
 import Error from "./pages/Error";
-import Blog from "./pages/Blog";
 import AddToy from "./pages/AddToy";
 import AllToys from "./pages/AllToys";
 import MyToys from "./pages/MyToys";
@@ -33,7 +32,6 @@ const App = () => {
             <Route path="update-toys/:id" element={<UpdateToy />} />
           </Route>
           <Route path="my-toys" element={<MyToys />} />
-          <Route path="blogs" element={<Blog />} />
           <Route path="login" element={<Login />} />
           <Route path="registration" element={<Registration />} />
         </Route>

@@ -3,23 +3,21 @@ import ReactStars from "react-rating-stars-component";
 import { BsArrowUpRightSquare } from "react-icons/bs";
 
 const ToyCard = ({ toy, allToys }) => {
+  const name =
+    toy.toy_name.length >= 27
+      ? `${toy.toy_name.substring(0, 27)}...`
+      : toy.toy_name;
   return (
     <Link
-      data-aos="fade-up"
-      data-aos-duration="1000"
       to={`/toys/${toy._id}`}
       key={toy._id}
-      className="card relative w-full shadow-xl border border-indigo-100 mb-4 lg:mb-0 rounded-lg z-0"
+      className="relative z-0 w-full mb-4 border border-indigo-100 rounded-lg shadow-xl card lg:mb-0"
     >
-      <figure className="h-72">
-        <img
-          src={toy.picture}
-          alt={toy.toy_name}
-          className="w-1/2 hover:scale-150 duration-[3000ms] z-10"
-        />
+      <figure className="h-32">
+        <img src={toy.picture} alt={toy.toy_name} className="z-10 w-20" />
       </figure>
       <div className="card-body">
-        <div className="font-bold text-lg text-mainColor">
+        <div className="text-sm font-bold text-mainColor">
           <p>{toy.toy_name} </p>
           {allToys && (
             <p className="text-xs text-gray-400">
@@ -27,11 +25,11 @@ const ToyCard = ({ toy, allToys }) => {
             </p>
           )}
         </div>
-        <div className="flex justify-between items-center py-2">
+        <div className="flex items-center justify-between py-2">
           {toy.discount ? (
             <p className="text-xl font-bold">
               {toy.discount_price}{" "}
-              <span className="text-xs line-through font-normal">
+              <span className="text-xs font-normal line-through">
                 {toy.price}
               </span>
             </p>
@@ -39,33 +37,33 @@ const ToyCard = ({ toy, allToys }) => {
             <p className="text-xl font-bold">{toy.price}</p>
           )}
 
-          <p className="flex items-center justify-end gap-x-2 font-bold text-sm">
+          <p className="flex items-center justify-end text-sm font-bold gap-x-2">
             <ReactStars size={20} value={toy.rating} edit={false} />
             <span>{toy.rating}</span>
           </p>
         </div>
         <Link
           to="/"
-          className="underline text-sm text-mainColor justify-end items-center flex gap-x-2"
+          className="flex items-center justify-end text-sm underline text-mainColor gap-x-2"
         >
           <span>See Details</span>
           <BsArrowUpRightSquare />
         </Link>
         {allToys && toy.category && (
           <div>
-            <p className="badge absolute left-4 top-4 text-sm bg-mainColor border-0">
+            <p className="absolute text-sm border-0 badge left-4 top-4 bg-mainColor">
               {toy.category}
             </p>
           </div>
         )}
       </div>
       {allToys && (
-        <p className="p-2 font-semibold text-xs border-t-2">
+        <p className="p-2 text-xs font-semibold border-t-2">
           Seller - {toy.seller_name}
         </p>
       )}
       {toy.discount && (
-        <div className="badge absolute right-4 top-4 font-bold text-xs bg-mainColor border-0">
+        <div className="absolute text-xs font-bold border-0 badge right-4 top-4 bg-mainColor">
           - {toy.discount}%
         </div>
       )}
