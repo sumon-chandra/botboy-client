@@ -54,14 +54,14 @@ const AllToys = () => {
             </button>
           </form>
         </div>
-        <select
+        {/* <select
           value={sortedValue}
           onChange={(e) => setSortedValue(e.target.value)}
           className="absolute top-1 lg:bottom-4 lg:right-20 right-1 lg:input"
         >
           <option value="ascending">Ascending</option>
           <option value="descending">Descending</option>
-        </select>
+        </select> */}
       </header>
 
       {error ? (

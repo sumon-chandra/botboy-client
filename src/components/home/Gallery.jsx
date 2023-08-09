@@ -1,6 +1,6 @@
 const Gallery = () => {
   return (
-    <section className="px-4 py-10 lg:px-20 lg:py-20">
+    <section className="px-4 pt-10 lg:px-20 lg:pt-20">
       <div className="text-center">
         <p className="text-[12px]">Our Gallery</p>
         <h4 className="text-2xl font-bold lg:text-5xl text-mainColor font-head">

@@ -57,11 +57,6 @@ const ToyCard = ({ toy, allToys }) => {
           </div>
         )}
       </div>
-      {allToys && (
-        <p className="p-2 text-xs font-semibold border-t-2">
-          Seller - {toy.seller_name}
-        </p>
-      )}
       {toy.discount && (
         <div className="absolute text-xs font-bold border-0 badge right-4 top-4 bg-mainColor">
           - {toy.discount}%

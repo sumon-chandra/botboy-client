@@ -6,6 +6,7 @@ import CertifiedSection from "../components/home/CertifiedSection";
 import FlashSell from "../components/home/FlashSell";
 import FlatDiscount from "../components/home/FlatDiscount";
 import Gallery from "../components/home/Gallery";
+import OurPartners from "../components/home/OurPartners";
 import SpecialDiscount from "../components/home/SpecialDiscount";
 import SpecialProducts from "../components/home/SpecialProducts";
 import useTitle from "../hooks/useTitle";
@@ -24,6 +25,7 @@ const Home = () => {
       <SpecialProducts />
       <CertifiedSection />
       <Gallery />
+      <OurPartners />
     </>
   );
 };
