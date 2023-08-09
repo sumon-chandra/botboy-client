@@ -25,8 +25,6 @@ const SpecialProducts = () => {
         ))}
       </div>
       <Link
-        data-aos="fade-up"
-        data-aos-duration="1000"
         to="/all-toys"
         className="flex items-center justify-end w-24 mt-8 text-sm underline cursor-pointer text-mainColor gap-x-2"
       >

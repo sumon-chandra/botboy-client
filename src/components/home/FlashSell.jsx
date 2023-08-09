@@ -87,10 +87,10 @@ const FlashSell = () => {
             spaceBetween: 30,
           },
         }}
-        // autoplay={{
-        //   delay: 4000,
-        //   disableOnInteraction: false,
-        // }}
+        autoplay={{
+          delay: 4000,
+          disableOnInteraction: false,
+        }}
         modules={[Autoplay]}
         style={{ padding: "1rem !important" }}
         className="items-center jimport { ReactStars } from 'react-rating-stars-component';

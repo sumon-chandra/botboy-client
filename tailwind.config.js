@@ -10,6 +10,9 @@ export default {
       fontFamily: {
         head: "Maven Pro",
       },
+      backgroundImage: {
+        "certified-img": "url('./src/assets/certificate-img.jpg')",
+      },
     },
   },
   plugins: [require("daisyui")],

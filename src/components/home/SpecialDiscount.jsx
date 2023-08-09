@@ -4,7 +4,7 @@ const SpecialDiscount = () => {
       <div className="absolute bg-gradient-to-l from-[#0000006c] to-[#03030300] bottom-0 top-0 right-0 lg:pr-20 pr-4 lg:pt-40 lg:space-y-4 pt-10 text-right text-white">
         <div>
           <p className="text-sm lg:text-xl">Amazing Deals Just For You!</p>
-          <h3 className="text-2xl font-bold lg:text-3xl font-head">
+          <h3 className="text-3xl font-bold lg:text-5xl font-head">
             Children's Room On White <br />
             Wall Colors
           </h3>
